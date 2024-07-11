@@ -91,3 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function openLink(url) {
     window.open(url, '_blank');
 }
+
+
+function openQuizLink() {
+    window.open('https://imrinal.github.io/Quiz-Game/', '_blank');
+}
