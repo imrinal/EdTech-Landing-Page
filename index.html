@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/icon.png">
+    <title>EduPedia - E-Learning Platform</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span><img src="images/Logo.png" class="lg"><img src="images/Heading.png" class="hd"></span>
+        </div>
+        <ul>
+            <li><a href="#course" class="scroll-to">Courses</a></li>
+            <li class="dropdown">
+                <a href="#quiz" class="dropbtn">Quiz</a>
+                <div class="dropdown-content">
+                    <a href="#">Class 9</a>
+                    <a href="#">Class 10</a>
+                    <a href="#">Class 11</a>
+                    <a href="#">Class 12</a>
+                </div>
+            </li>
+            <li><a href="#contact" class="scroll-to">Live Class</a></li>
+            <li><a href="#faculty" class="scroll-to">Faculties</a></li>
+            <li><a href="#testimony" class="scroll-to">Testimonials</a></li>
+            <li><a href="#contact" class="scroll-to">Contact Us</a></li>
+        </ul>
+        <!-- Login Button -->
+        <button class="Login-Button" onclick="handleButtonClick()"><span>Log In</span></button>
+    </header>
+
+    <div class="hero-section">
+    </div>
+
+    <section id="course">
+        <div class="course">
+            <div>
+                <h1>Our <span style="color: #E00051;">Courses</span></h1>
+            </div>
+            <div class="slider">
+                <button class="prev" onclick="prevCourseSlide()">❮</button>
+                <div class="slider-wrapper">
+                    <div class="slider-container">
+                        <div class="course-card">
+                            <img src="images/course1.jpg" alt="Course 1">
+                            <div class="cardinfo">
+                                <h3>Mathematics Foundation</h3>
+                                <p>Class 9 Courses</p><br>
+                                <div class="course-price">₹5,000</div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img src="images/course2.jpg" alt="Course 2">
+                            <div class="cardinfo">
+                                <h3>Science Explorer Basics</h3>
+                                <p>Class 9 Courses</p><br>
+                                <div class="course-price">₹6,500</div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img src="images/course3.jpg" alt="Course 3">
+                            <div class="cardinfo">
+                                <h3>English Literature Hunt</h3>
+                                <p>Class 10 Courses</p><br>
+                                <div class="course-price">₹7,200</div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img src="images/course4.jpg" alt="Course 4">
+                            <div class="cardinfo">
+                                <h3>Social Studies Masterclass</h3>
+                                <p>Class 10 Courses</p><br>
+                                <div class="course-price">₹6,800</div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img src="images/course5.jpg" alt="Course 4">
+                            <div class="cardinfo">
+                                <h3>Calculus and Trigonometry</h3>
+                                <p>Class 11 Courses</p><br>
+                                <div class="course-price">₹7,600</div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img src="images/course6.jpg" alt="Course 4">
+                            <div class="cardinfo">
+                                <h3>Advanced Physics and Chemistry</h3>
+                                <p>Class 11 Courses</p><br>
+                                <div class="course-price">₹8,300</div>
+                            </div>
+                        </div>
+                        <div class="course-card">
+                            <img src="images/course7.jpg" alt="Course 4">
+                            <div class="cardinfo">
+                                <h3>Web and App Development</h3>
+                                <p>Class 12 Courses</p><br>
+                                <div class="course-price">₹8,500</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next" onclick="nextCourseSlide()">❯</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </section>
+    
+    <section id="quiz">
+        <div class="quiz">
+            <div class="quiz-buttons">
+                <button>Quiz Whiz 9</button>
+                <button>Quiz-o-Mania 10</button>
+                <button>Quiz Fusion 11</button>
+                <button>Quiz Legends 12</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="faculty">
+        <div class="faculty">
+            <div>
+                <h1>Our <span style="color: #E00051;">Faculties</span></h1>
+            </div>
+            <div class="sliderf">
+                <button class="prevf" onclick="prevFacultySlide()">❮</button>
+                <div class="slider-wrapperf">
+                    <div class="slider-containerf">
+                        <div class="faculty-card">
+                            <img src="Teacher/Shreyas.png">
+                            <div class="facultyinfo">
+                                <h3>Shreyas</h3>
+                                <p>Physics Master Teacher</p><br>
+                                <div class="faculty-exp">11+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Nidhi-Sharma.png">
+                            <div class="facultyinfo">
+                                <h3>Nidhi Sharma</h3>
+                                <p>Chemistry Master Teacher</p><br>
+                                <div class="faculty-exp">4+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Luv-Mehan.png">
+                            <div class="facultyinfo">
+                                <h3>Luv Mehan</h3>
+                                <p>Chemistry Master Teacher</p><br>
+                                <div class="faculty-exp">2+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Rachita-Sachdeva.png">
+                            <div class="facultyinfo">
+                                <h3>Rachita Sachdeva</h3>
+                                <p>Chemistry Master Teacher</p><br>
+                                <div class="faculty-exp">5+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Harsh-Priyam.png">
+                            <div class="facultyinfo">
+                                <h3>Harsh Priyam</h3>
+                                <p>Math Master Teacher</p><br>
+                                <div class="faculty-exp">7+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Nabamita.png">
+                            <div class="facultyinfo">
+                                <h3>Nabamita</h3>
+                                <p>Science Master Teacher</p><br>
+                                <div class="faculty-exp">3+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Bhawna-Arora.png">
+                            <div class="facultyinfo">
+                                <h3>Bhawna Arora</h3>
+                                <p>Physics Master Teacher</p><br>
+                                <div class="faculty-exp">8+ Years Exp</div>
+                            </div>
+                        </div>
+                        <div class="faculty-card">
+                            <img src="Teacher/Abhishek-KR.png">
+                            <div class="facultyinfo">
+                                <h3>Abhishek KR</h3>
+                                <p>Physics Master Teacher</p><br>
+                                <div class="faculty-exp">5+ Years Exp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="nextf" onclick="nextFacultySlide()">❯</button>
+            </div>
+        </div>
+        <script src="script.js"></script>    
+    </section>
+    
+    <section id="testimony">
+        <div class="testimonial">
+            <div>
+                <h1>Student <span style="color: #E00051;">Success</span> Stories!</h1>
+            </div><br>
+            <div class="rating-slider">
+                <button class="prevr" onclick="prevRatingSlide()">❮</button>
+                <div class="rating-wrapper">
+                    <div class="rating-container">
+                        <div class="rating-card">
+                            <img src="Testimonials/1.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/2.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/3.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/4.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/1.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/2.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/3.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/4.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/1.png">
+                        </div>
+                        <div class="rating-card">
+                            <img src="Testimonials/2.png">
+                        </div>
+                    </div>
+                </div>
+                <button class="nextr" onclick="nextratingSlide()">❯</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </section>
+    
+    <section id="contact">
+        <div class="contact-us">
+            <div>
+                <h1>Contact <span style="color: #E00051;">Us</span></h1>
+            </div><br>
+            <div class="contact-form">
+                <form action="#">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+            
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+            
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+            
+                  <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+</body>
+</html>

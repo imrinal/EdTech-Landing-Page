@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;  
+  height: 12px; 
+}
+
+/* The scrollbar track */
+::-webkit-scrollbar-track {
+  background: #d7d7d7;  
+  border-radius: 10px;  
+}
+
+/* The scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #E00051;
+  border: 2px solid #e45d8f;
+  border-radius: 10px; 
+}
+
+/* The scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a1013c;  
+}
+
+header {
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo .lg {
+    height: 60px; 
+    margin-right: 0px; 
+}
+
+.logo .hd {
+    height: 50px; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+}
+
+li a {
+    display: block;
+    color: #001447;
+    padding: 7px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+li a:hover {
+    color: #E00051;
+    font-weight: bold;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #001447;
+    width: 120px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 5px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.Login-Button {
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 150px;
+    transition: 0.3s ease;
+    background-color: white;
+    border: 1px solid #E00051;
+    color: #E00051;
+}
+
+.Login-Button:hover {
+    background-color: #E00051;
+    border: 1px solid #001447;
+    color: white;
+}
+
+.Login-Button:active {
+    background-color: white;
+    border: 1px solid #E00051;
+    color: #E00051;
+}
+
+.hero-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/Hero-Banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider {
+  position: relative;
+  margin-left: 32px;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-wrapper {
+  padding: 8px;
+  margin-left: 63px;
+  width: 90%;
+  display: flex;
+  overflow: hidden;
+  
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px; 
+}
+
+.course-card {
+  margin-top: 20px;
+  width: 250px; 
+  background-color: #df87a74e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.cardinfo {
+  padding: 0px 30px 20px 30px;
+}
+
+.course-card h3 {
+  margin-top: 5px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.course-price {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #001447;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.course-price:hover {
+  background-color: #E00051;
+}
+
+.next, .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #001447;
+  font-weight: bolder;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 0px; 
+}
+
+.next {
+  right: 0px; 
+}
+
+.course {
+  text-align: center;
+  margin-top: 50px; 
+  margin-bottom: 60px;
+}
+
+.course h1 {
+  margin-bottom: 10px; 
+  color: #001447;
+  font-family: 'Poppins', sans-serif;
+}
+
+.quiz{
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 70px;
+  justify-content: center;
+  align-items: center;
+  background-image: url('images/quiz-banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quiz-buttons{
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 95px;
+  margin-left: 600px;
+ }
+
+.quiz-buttons button{
+  border: none;
+  cursor: pointer;
+  padding: 2px 30px;
+  color: #a85237;
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  font-family: "Anton SC", sans-serif;
+  transition: 0.3s;
+ }
+
+ .quiz-buttons button:hover{
+  color: #001447;
+}
+
+.quiz-buttons button:active{
+  color: #E00051;
+}
+
+.contact-us{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-left: 50px;
+  justify-content: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: top;
+  background-image: url('images/contact-us.png');
+}
+
+.contact-us h1 {
+  font-size: 50px;
+  margin-top: 50px; 
+  color: #001447;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form{
+  border-radius: 20px;
+  width: 400px;
+}
+
+.contact-form label {
+  display: block;
+  color: #001447;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: none;
+  color: #E00051;
+  background-color: #ffe4a4;
+}
+
+.contact-form button {
+  background: #E00051;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #001447;
+}
+
+.sliderf {
+  position: relative;
+  margin-left: 32px;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-wrapperf {
+  padding: 8px;
+  margin-left: 63px;
+  width: 90%;
+  display: flex;
+  overflow: hidden;
+  
+}
+
+.slider-containerf {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 20px; 
+}
+
+
+.faculty-card {
+  margin-top: 20px;
+  width: 250px; 
+  background-color: transparent;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.faculty-card img {
+  height: 60vh;
+  border-radius: 10px 10px 0 0;
+}
+
+.facultyinfo {
+  background-color: #001447;
+  padding: 10px 30px 20px 30px;
+  border-radius: 0 0 10px 10px;
+}
+
+.faculty-card p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 8px;
+}
+.faculty-card h3{
+  color: #ffe4a4;
+}
+
+.faculty-exp {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #E00051;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.nextf, .prevf {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #001447;
+  font-weight: bolder;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.prevf {
+  left: 0px; 
+}
+
+.nextf {
+  right: 0px; 
+}
+
+.faculty {
+  text-align: center;
+  margin-top: 50px; 
+  margin-bottom: 60px;
+}
+
+.faculty h1 {
+  margin-bottom: 10px; 
+  color: #001447;
+  font-family: 'Poppins', sans-serif;
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: top;
+    background-image: url('images/Testimonial-BG.png');
+}
+
+.testimonial h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #001447;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rating-card img{
+  border-radius: 40px 0 40px 0;
+  height: 250px;
+  border: 1.5px solid #001447;
+}
+
+.rating-slider{
+  position: relative;
+  margin-left: 32px;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.rating-wrapper{
+  padding: 8px;
+  margin-left: 63px;
+  display: flex;
+  overflow: visible;
+}
+
+.rating-container{
+  display: flex;
+  transition: transform 1s ease;
+  gap: 20px; 
+}
+
+.rating-card {
+  width: 250px;
+  background-color: transparent;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nextr, .prevr{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: #001447;
+  font-weight: bolder;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.prevr{
+  left: 0px; 
+}
+
+.nextr{
+  right: 0px; 
+}
+
+footer{
+  height: 140px;
+  background-image:url(images/Footer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
